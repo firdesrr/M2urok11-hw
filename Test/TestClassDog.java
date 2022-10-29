@@ -15,15 +15,7 @@ public class TestClassDog {
         assertEquals(expectedDogWeight, actualDogWeight);
     }
 
-    @Test
-    public void testFirstWalkOut() {
-        //тествам метода дали когато кучето се разхожда за първи път, му се намалява теглото
-        Dog dog3 = new Dog();
-        dog3.walkOut(15);
-        double expectedDogWeight = 0.96;
-        double actualDogWeight = dog3.getWeight();
-        assertEquals(expectedDogWeight, actualDogWeight);
-    }
+
     @Test
     public void testFirstEatNotGainingWeight() {
         //тествам метода дали когато кучето се храни за първи път, но няма храна, НЕ му се повишава теглото
@@ -32,6 +24,15 @@ public class TestClassDog {
         dog1.eat(testFood);
         double expectedDogWeight = 1;
         double actualDogWeight = dog1.getWeight();
+        assertEquals(expectedDogWeight, actualDogWeight);
+    }
+    @Test
+    public void testFirstWalkOut() {
+        //тествам метода дали когато кучето се разхожда за първи път, му се намалява теглото
+        Dog dog3 = new Dog();
+        dog3.walkOut(15);
+        double expectedDogWeight = 0.96;
+        double actualDogWeight = dog3.getWeight();
         assertEquals(expectedDogWeight, actualDogWeight);
     }
     @Test
