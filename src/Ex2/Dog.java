@@ -10,7 +10,7 @@ public class Dog {
     Добавете поне по 2 тестови сценария към методите
     eat(), walkOut() и тествайте метода makeSound().*/
     public static void makeSound() {
-        System.out.println( " makes sound \"Bau Bau!\"");
+        System.out.println( "Dog makes sound \"Bau Bau!\"");
     }
 
     public  void  eat(String food) {

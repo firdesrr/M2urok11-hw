@@ -43,5 +43,10 @@ public class TestClassDog {
         double actualDogWeight = dog4.getWeight();
         assertEquals(expectedDogWeight, actualDogWeight);
     }
+@Test
+public void testMakeSound()
+{
+     Dog.makeSound();
+}
 
 }
