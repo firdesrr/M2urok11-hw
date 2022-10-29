@@ -4,23 +4,32 @@ public class Dog {
     private String breed;
     private String name;
     private int age;
-    private double weight;
+    private double weight; //kg
 
     /*
     Добавете поне по 2 тестови сценария към методите
     eat(), walkOut() и тествайте метода makeSound().*/
     public static void makeSound() {
-        System.out.println(" makes sound \"Bau Bau!\"");
+        System.out.println( " makes sound \"Bau Bau!\"");
     }
 
     public  void  eat(String food) {
-        System.out.println(" dog is eating food: " + food);
-        setWeight(getWeight()+0.05) ;
+        if (food!=null) {
+            System.out.println(" dog " +this.name+" is eating food: " + food);
+            this.weight += 0.05;
+        }
+        else {
+            System.out.println( "dog " +this.name+ "  isn't eating...");
+        }
     }
 
     public  void walkOut(int time) {
-        System.out.println(this.name+" is walking " + time + " minutes");
-        this.weight -= 0.04;//
+        if(time>0) {
+            System.out.println(this.name + " is walking " + time + " minutes");
+            this.weight -= 0.04;
+        } else {
+            System.out.println( "dog " +this.name+ "  isn't walking...");
+        }
     }
 
     public Dog() {
